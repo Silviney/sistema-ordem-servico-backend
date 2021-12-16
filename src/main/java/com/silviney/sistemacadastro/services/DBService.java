@@ -27,7 +27,7 @@ public class DBService {
 	private ChamadoRepository chamadoRepository;
 
 	public void instanciaDB() {
-		Tecnico tec1 = new Tecnico(null, "Silviney França", "43538065217", "silviney@mail.com", "1234");
+		Tecnico tec1 = new Tecnico(null, "Fernando", "43538065217", "fneto@mail.com", "1234");
 		tec1.addPerfil(Perfil.ADMIN);
 		
 		Tecnico tec2 = new Tecnico(null, "Sidney França", "83800478188", "sidney@mail.com", "8756");
@@ -36,7 +36,10 @@ public class DBService {
 		Tecnico tec3 = new Tecnico(null, "Jason Sousa", "44178561847", "Jason@mail.com", "5789");
 		tec3.addPerfil(Perfil.TECNICO);
 		
-		Cliente cli1 = new Cliente(null, "Thais Eveline", "82111982156", "thaiseveline@mail.com", "9874");
+		Tecnico tec4 = new Tecnico(null, "Silviney França", "46207882954", "ney@mail.com", "2589");
+		tec4.addPerfil(Perfil.TECNICO);
+		
+		Cliente cli1 = new Cliente(null, "Shirlene França", "82111982156", "lena@mail.com", "9874");
 		Cliente cli2 = new Cliente(null, "Dominique Graziella", "36495026749", "domi@mail.com", "89874");
 		Cliente cli3 = new Cliente(null, "Shirley França", "46940544496", "shirley@mail.com", "69874");
 		
@@ -44,9 +47,9 @@ public class DBService {
 		Chamado ch2 = new Chamado(null, Prioridade.MEDIA, Status.ANDAMENTO, "Chamado 01", "Primeiro Chamado", tec2, cli2);
 		Chamado ch3 = new Chamado(null, Prioridade.MEDIA, Status.ANDAMENTO, "Chamado 01", "Primeiro Chamado", tec3, cli3);
 		
-		tecnicoRepository.saveAll(Arrays.asList(tec1, tec2,tec3 ));
-		clienteRepository.saveAll(Arrays.asList(cli1, cli2,cli3 ));
-		chamadoRepository.saveAll(Arrays.asList(ch1, ch2,ch3 ));
+		tecnicoRepository.saveAll(Arrays.asList(tec1, tec2, tec3,tec4));
+		clienteRepository.saveAll(Arrays.asList(cli1, cli2,cli3));
+		chamadoRepository.saveAll(Arrays.asList(ch1, ch2,ch3));
 	}
 	
 }

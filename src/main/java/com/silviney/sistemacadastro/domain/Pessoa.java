@@ -27,6 +27,7 @@ public abstract class Pessoa implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected Integer id;
+	
 	protected String nome;
 	
 	@CPF
